@@ -10,9 +10,6 @@
   <meta name="keywords" content="global, template, html, sass, jquery">
   <meta name="author" content="Bucky Maler">
   <link rel="stylesheet" href="assets/css/main.css">
-  <script>
-    window.PAGECLIP_SECRET_KEY = '<%= process.env.PAGECLIP_SECRET_KEY %>';
-  </script>
 </head>
 
 <body>
@@ -198,7 +195,7 @@
               <div class="hire">
                 <h2>You want us to do</h2>
                 <!-- checkout formspree.io for easy form setup -->
-                <form class="work-request">
+                <form class="work-request" action="https://send.pageclip.co/9QoKi1mBz1MYrDvTdaQqKU34dhBtkL8h" method="post">
                   <div class="work-request--options">
                     <span class="options-a">
                       <input id="opt-1" type="checkbox" value="app design">
@@ -279,11 +276,11 @@
                   </div>
                   <div class="work-request--information">
                     <div class="information-name">
-                      <input id="name" type="text" spellcheck="false">
-                      <label for="name">Name</label>
+                      <input id="name" name="name" type="text" spellcheck="false">
+                      <label for="name" >Name</label>
                     </div>
                     <div class="information-email">
-                      <input id="email" type="email" spellcheck="false">
+                      <input id="email" name="email" type="email" spellcheck="false">
                       <label for="email">Email</label>
                     </div>
                   </div>
@@ -309,10 +306,6 @@
     window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')
   </script>
   <script src="assets/js/functions-min.js"></script>
-  <script>
-    const pageClipSecretKey = window.PAGECLIP_SECRET_KEY || 'fallback_value_if_not_available';
-    console.log('🚀 Pageclip Secret Key:', pageClipSecretKey);
-  </script>
 </body>
 
 </html>
